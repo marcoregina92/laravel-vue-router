@@ -23,7 +23,20 @@ export default {
 
 <template>
     <div>
-        <h1>Sono un componente!</h1>
+        <h1>Eventi:</h1>
+    </div>
+
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between">
+            <div v-for="evento in store.eventList" class="card " style="width: 18rem;">
+                <div class="card-body">
+                    <h2 class="card-title">{{ evento.name }} evento di</h2>
+                    <h5 class="card-text">Città: {{ evento.city }}</h5>
+                    <p class="card-text">Data: {{ evento.date }}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
