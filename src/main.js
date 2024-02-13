@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { router } from './router';
+
 
 // importo bootstrap (js)
 import * as bootstrap from 'bootstrap'
@@ -21,5 +23,6 @@ library.add(brandIcons.fab);
 
 window.vue = {};
 window.vue.App = createApp(App)
+    .use(router)
     .component('font-awesome-icon', FontAwesomeIcon)
     .mount('#app');

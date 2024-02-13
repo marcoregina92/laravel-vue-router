@@ -1,13 +1,9 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
-import axios from 'axios'; //importo Axios
 
+import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
 
 export default {
-	components: {
-		AppComponent
-	},
 	data() {
 		return {
 			store
@@ -31,11 +27,8 @@ export default {
 </script>
 
 <template>
-	<main>
-		<AppComponent />
-
-
-	</main>
+	<header> header qui </header>
+	<router-view></router-view>
 </template>
 
 <style lang="scss">
@@ -48,7 +41,4 @@ export default {
 // @use './styles/partials/variables' as *;
 
 // ...qui eventuale SCSS di App.vue
-main {
-	padding: 1rem;
-}
 </style>
